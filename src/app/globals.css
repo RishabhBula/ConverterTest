@@ -25,3 +25,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.btn-white {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgb(222.06, 222.06, 222.06) 100%);
+  }
