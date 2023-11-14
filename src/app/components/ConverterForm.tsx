@@ -36,7 +36,7 @@ const ConverterForm = () => {
             </span>
             </div>
            
-           <div className="w-full relative mb-7" onClick={() => setShowDropdown(true)}>
+           <div className="w-full relative mb-7" onClick={() => setShowDropdown(!showDropdown)}>
               <input type="number" className="border-b-2 border-[#e4e4e414] pl-4 h-[63px] bg-[rgba(228,228,228,0.08)] w-full"/>
               
               <span className="cursor-pointer font-bold flex justify-center items-center h-full absolute top-0 right-[14px] text-[#E4E4E4]">
@@ -45,11 +45,11 @@ const ConverterForm = () => {
             </span>
             {
               showDropdown &&
-            <ul className={`max-h-[200px] overflow-y-auto absolute left-0 bottom-0 w-full px-2`}>
+            <ul className={`max-h-[200px] overflow-y-auto absolute left-0 top-[64px] bg-black/[80%] w-full`}>
               {/* {console.log(listData ,'listData')} */}
             {listData?.map((ele:any, index:number)=>{
               return(
-                <li key={index} className="overflow-hidden px-4">{ele.name}</li>
+                <li key={index} className="overflow-hidden px-4 cursor-pointer py-2 hover:bg-white/[30%]">{ele.name}</li>
               )
             })}
             </ul>
